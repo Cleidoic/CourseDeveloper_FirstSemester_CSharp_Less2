@@ -8,13 +8,16 @@
 918 -> 1
 */
 
-void SecondNumber(int num) {
+void SecondDigit(int num) {
+    
     if (num < 100 || num > 1000) 
         Console.WriteLine($"Вы ввели не трёхзначное число, повторите попытку: {num}");
     else
         Console.WriteLine($"Вторая цифра введенного числа: {num%100/10}");
+
 }
-SecondNumber(472);
+
+SecondDigit(472);
 
 /*
 Задача 2: Напишите программу, 
@@ -26,7 +29,18 @@ SecondNumber(472);
 32679 -> 6
 */
 
+void ThirdDigit(int num) {
 
+    int digit = 0;
+    if (num < 100)
+        Console.WriteLine($"В числе {num} нет третьей цифры");
+    else {
+        digit = num.ToString()[2] - '0';
+        Console.WriteLine($"Третья цифра числа {num}: {digit}");
+    }
+}
+
+ThirdDigit(154865);
 
 /*
 Задача 3: Напишите программу, 
